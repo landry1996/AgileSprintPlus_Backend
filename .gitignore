@@ -1,1 +1,5 @@
-src/main/resources/application-secret.yml
+# Secrets Spring Boot
+**/application-secret*.yml
+**/application-secret*.yaml
+**/application-secrets*.yml
+**/application-secrets*.yaml
