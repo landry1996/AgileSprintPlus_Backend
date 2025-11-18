@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "Agile-Sprint-Plus",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Sprint",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sprint 1\",\n  \"startDate\": \"2025-11-01\",\n  \"endDate\": \"2025-11-15\",\n  \"goal\": \"Stabilize backlog\"\n}"
+        },
+        "url": "http://localhost:9090/api/sprints"
+      }
+    },
+    {
+      "name": "List Sprints",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:9090/api/sprints"
+      }
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Implement login\",\n  \"description\": \"JWT\",\n  \"storyPoints\": 5\n}"
+        },
+        "url": "http://localhost:9090/api/tasks"
+      }
+    },
+    {
+      "name": "Velocity Forecast",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:9090/api/analytics/velocity/forecast?lastVelocity=30"
+      }
+    }
+  ]
+}
